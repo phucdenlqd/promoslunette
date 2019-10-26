@@ -1,0 +1,112 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- COLORS -------
+
+$hm-text-color: $light-text-color;
+$hm-text-color-secondary: $color-base;
+$hm-darken-bg: darken($color-dark, 5%);
+$hm-lighten-bg: lighten($color-dark, 5%);
+
+// ------- Header Modules Indents --------
+
+@mixin hm-indent {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  padding: 20px 25px;
+  position: relative;
+  display: block;
+  color: $hm-text-color;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-base;
+  
+  strong {
+    font-weight: 400;
+  }
+}
+
+// ------- Header Modules Icons -------
+
+@mixin hm-icon {
+  @include addIcon('\f107');
+  font-size: 16px;
+  line-height: 18px;
+  color: $hm-text-color-secondary;
+  padding-left: 12px;
+  font-weight: normal;
+}
+
+@mixin hm-icon-hover {
+  content: "\f106";
+}
+
+// ------- Header Modules Drop Down Box -------
+
+@mixin hm-drop-down-box {
+  display: none;
+  width: 170px;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 2;
+  overflow: hidden;
+  background: $hm-darken-bg;
+  border-radius: $border-radius-base;
+  color: $hm-text-color-secondary;
+  li {
+    padding: 5px;
+  }
+}
+
+// ------- SEARCH bLOCK IN HEADER AND BLOG SEARCH IN LEFT COLUMN -------
+
+@mixin search-box-style {
+  #tmsearchbox, #searchbox {
+    float: left;
+    width: 100%;
+    border: none;
+    position: relative;
+    background: $base-box-bg;
+    @include box-shadow(inset 0 0 0 1px $base-border-color);
+    border-radius: $border-radius-base;
+    .btn.button-search {
+      background: $dark-background;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      color: white;
+      width: 50px;
+      text-align: center;
+      height: 100%;
+      span {
+        display: none;
+      }
+      &:before {
+        @include addIcon('\f002');
+        font-size: 25px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include transform (translate(0, -50%));
+      }
+      &:hover {
+        background: $primary-background;
+      }
+    }
+    #tm_search_query, #search_query_top {
+      display: block;
+      padding: 12px 0 13px 13px;
+      height: 45px;
+      border: none;
+      background: none;
+      border-right: 60px solid rgba($light-border-color, 0);
+    }
+  }
+}

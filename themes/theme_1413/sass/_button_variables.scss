@@ -1,0 +1,226 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- MAIN BUTTON STYLES -------
+
+$font-button: $font;
+$button-text-color: $link-hover-color;
+
+// ------- Grid/List vars -------
+
+$GL-text-color: $base-body-color;
+$GL-icon-color: $dark-text-color;
+$GL-icon-color-hover: $primary-text-color;
+
+/*
+* @subsection   Buttons
+*/
+$btn-xs-height: 30px;
+$btn-xs-size: 13px;
+
+$btn-sm-height: $btn-xs-height * 1.15;
+$btn-sm-size: $btn-xs-size * 1.13;
+
+$btn-md-height: $btn-sm-height * 1.2;
+$btn-md-size: $btn-sm-size * 1.12;
+
+$btn-lg-height: $btn-md-height * 1.33;
+$btn-lg-size: $btn-md-size * 1.12;
+
+$btn-xl-height: $btn-lg-height * 1.125;
+$btn-xl-size: $btn-lg-size * 1.26;
+
+// Button General Styles
+.btn {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  white-space: normal;
+  max-width: 100%;
+  border-style: solid;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  border-radius: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  &.icon-right {
+    span {
+      display: block;
+      padding-right: 20px;
+      position: relative;
+      &:after {
+        @include addIcon('\f054');
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include transform (translate(0, -50%));
+      }
+    }
+  }
+  &.icon-left {
+    span {
+      display: block;
+      padding-left: 20px;
+      position: relative;
+      &:before {
+        @include addIcon('\f053');
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include transform (translate(0, -50%));
+      }
+    }
+  }
+  span {
+    i {
+      &.left {
+        vertical-align: 0;
+        margin: 0 5px 0 0;
+        display: inline-block;
+      }
+      &.right {
+        margin-right: 0;
+        margin-left: 5px;
+      }
+    }
+  }
+  &:hover,
+  &:active,
+  &:active:focus,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Button Layout Styles
+.btn-xs {
+  border-width: 1px;
+  padding: ceil(($btn-xs-height - ($btn-xs-size * 1.2) - 2) / 2) 10px;
+  font-size: ceil($btn-xs-size);
+}
+
+.btn-sm {
+  border-width: 1px;
+  padding: ceil(($btn-sm-height - ($btn-sm-size * 1.2) - 2) / 2) 18px;
+  font-size: ceil($btn-sm-size);
+}
+
+.btn-md {
+  border-width: 1px;
+  padding: ceil(($btn-md-height - ($btn-md-size * 1.2) - 2) / 2) 25px;
+  font-size: ceil($btn-md-size);
+}
+
+.btn-lg {
+  border-width: 1px;
+  padding: ceil(($btn-lg-height - ($btn-lg-size * 1.2) - 2) / 2) 30px;
+  font-size: ceil($btn-lg-size);
+}
+
+.btn-xl {
+  border-width: 1px;
+  padding: ceil(($btn-xl-height - ($btn-xl-size * 1.2) - 2) / 2) 40px;
+  font-size: ceil($btn-xl-size);
+}
+
+// Button Appearance Styles
+.btn-default {
+  font-family: $font-custom2;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-dark;
+  background: none;
+  border: 2px solid $color-dark;
+  @include transition(all 0.3s ease-in-out);
+  
+  &:hover {
+    color: $color-light;
+    background: $color-primary;
+    border-color: $color-primary;
+  }
+
+  &:active:focus, &:active, &:focus, #{'.active'} > &, &.disabled, &.btn[disabled], #{'.disabled'} > & {
+    border-color: lighten($dark-border-color, 50%);
+    color: lighten($dark-border-color, 50%);
+  }
+}
+
+.btn-primary {
+  color: $primary-text-color;
+  background: $light-background;
+  border-color: $primary-border-color;
+  &:hover {
+    background: $primary-background;
+    color: $light-text-color;
+    border-color: $primary-border-color;
+  }
+  &:active:focus, &:active, &:focus {
+    border-color: lighten($primary-border-color, 30%);
+    background: lighten($primary-background, 30%);
+    color: $light-text-color;
+  }
+}
+
+.btn.ajax_add_to_cart_button, .btn.ajax_add_to_cart_product_button {
+  color: $primary-text-color;
+  background: $light-background;
+  border-color: $primary-border-color;
+  &:before {
+    @include addIcon('\f290');
+  }
+  &:hover {
+    background: $primary-background;
+    color: $light-text-color;
+    border-color: $primary-border-color;
+  }
+  &:active:focus, &:active, &:focus {
+    border-color: lighten($primary-border-color, 30%);
+    background: lighten($primary-background, 30%);
+    color: $light-text-color;
+  }
+}
+
+.btn.ajax_add_to_cart_button {
+  &.disabled {
+    display: none;
+  }
+}
+
+.btn.button-plus,
+.btn.button-minus {
+  font-size: ceil($btn-md-size);
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  height: $input-label-button-size;
+  width: $input-label-button-size;
+}
+
+.link-button {
+  font-weight: bold;
+  i {
+    margin-right: 5px;
+    &.large {
+      font-size: 26px;
+      line-height: 26px;
+      vertical-align: -3px;
+    }
+  }
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn, .pagination > li.disabled > span {
+  cursor: not-allowed !important;
+  opacity: 0.65;
+}

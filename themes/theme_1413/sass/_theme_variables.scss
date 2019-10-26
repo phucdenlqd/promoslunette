@@ -1,0 +1,88 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- FONTS -------
+
+$font-family: 'PT Serif', serif;
+$font-custom: 'PT Serif', serif;
+$font-custom2: 'PT Sans', sans-serif;
+
+$font: normal 13px/18px $font-family;
+$font-heading: normal 30px/44px $font-custom;
+$font-maxheading: bold 65px/85px $font-custom;
+$font-subheading: bold 16px/19px $font-custom;
+$fa-font-path: "../fonts";
+$font-icon: "FontAwesome";
+
+// ------- MAIN ICON MIXIN -------
+
+@mixin addIcon($content) {
+  font-family: $font-icon;
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+}
+
+// ------- MAIN COLORS --------
+
+$color-base: #888;
+$color-primary: #fe9b4b;
+$color-dark: #282828;
+$color-light: #FFFFFF;
+$color-succes: #46a74e;
+$color-warning: #f13340;
+$color-box: #d2dae3;
+$border-color: #141414;
+$block_bg: #f4f4f4;
+$inputs_bg: #333;
+$product_border: #e6e6e6;
+
+// ------- BORDERS ---------
+
+$base-border-color: $color-box;
+$table-border-color: $base-border-color;
+$main_border: 1px solid $base-border-color;
+$dark-border-color: $color-dark;
+$light-border-color: $color-light;
+$primary-border-color: $color-primary;
+
+// ------- BACKGROUNDS -------
+
+$base-box-bg: lighten($color-box, 10);
+$table-background: $base-box-bg;
+$dark-background: $color-dark;
+$light-background: $color-light;
+$primary-background: $color-primary;
+$olark-heading-bg: $primary-background;
+$olark-heading-bg1: $primary-background;
+
+// ------- COLORS -------
+
+$base-body-color: $color-base;
+$base-text-color: darken($color-base, 10);
+$light-text-color: $color-light;
+$dark-text-color: $color-dark;
+$primary-text-color: $color-primary;
+
+$base-heading-color: $color-dark;
+$base-title-color: $base-text-color;
+
+$link-color: darken($color-base, 10);
+$link-hover-color: $dark-text-color;
+
+// ------- Cart Steps On Page Checkout --------
+
+$cs-border-radius: 0;
+$step-todo-bg: $base-box-bg;
+$step-todo-border-color: darken($step-todo-bg, 15);
+$step-current-bg: $primary-background;
+$step-current-border-color: darken($step-current-bg, 15);
+$step-done-bg: $dark-background;
+$step-done-border-color: darken($step-done-bg, 15);
+$step-hover-bg: darken($step-done-bg, 15);
+$step-hover-border-color: darken($step-hover-bg, 15);
+
+// ------- Border radius on --inputs--selects--buttons--itc----------
+
+$border-radius-base: 0;
+$border-radius-small: 0;

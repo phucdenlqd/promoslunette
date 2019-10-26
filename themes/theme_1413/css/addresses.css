@@ -1,0 +1,35 @@
+/*
+* @subsection   Addresses Styles
+*/
+#addresses #center_column .page-heading {
+  margin: 0 0 22px; }
+#addresses #center_column p {
+  margin: 0 0 13px; }
+  #addresses #center_column p.p-indent {
+    margin: 0 0 27px; }
+
+.address li.address_update {
+  margin: 14px 0 6px 0; }
+  .address li.address_update a {
+    margin: 0 10px 0 0; 
+      background: rgb(105,211,88);
+    background: -moz-linear-gradient(top, rgba(105,211,88,1) 0%, rgba(35,127,25,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(105,211,88,1)), color-stop(100%,rgba(35,127,25,1)));
+    background: -webkit-linear-gradient(top, rgba(105,211,88,1) 0%,rgba(35,127,25,1) 100%);
+    background: -o-linear-gradient(top, rgba(105,211,88,1) 0%,rgba(35,127,25,1) 100%);
+    background: -ms-linear-gradient(top, rgba(105,211,88,1) 0%,rgba(35,127,25,1) 100%);
+    background: linear-gradient(to bottom, rgba(105,211,88,1) 0%,rgba(35,127,25,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d358', endColorstr='#237f19',GradientType=0 );
+    border: 1px solid green;
+    color: white;
+    font-weight: bold;
+    padding: 14px 0px;
+    text-align: center;
+    margin: 10px auto;
+    width: 35%;
+    min-width: 180px;
+    font-size: 15px;
+    text-shadow: 0 0 2px darkgreen;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;}

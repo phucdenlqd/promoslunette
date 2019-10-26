@@ -1,0 +1,66 @@
+
+/** {
+   outline: 1px solid red !important;
+}*/
+
+.etape-style{
+	border-radius: 5px;
+	border: 4px;
+	border-style: solid;
+	border-color: #a7a7a7;
+	 box-sizing: border-box;
+	 cursor: pointer;
+
+}
+.choisi{
+border: 4px;
+border-radius: 5px;
+border-style: solid;
+border-color: #5F82B8;
+ box-sizing: border-box;
+ cursor: pointer;
+	
+}
+
+hr.etape4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 4px solid rgb(124, 120, 120);
+}
+
+.choix-e4-input{
+	width: 70%;
+    margin: auto;
+    padding: 2px .5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid #a7a7a7;
+}
+
+
+.choix-e4-list{
+	
+	position: absolute;
+	z-index: 1;
+	background: #ffffff;
+	width: 250px;
+	height: auto;
+	max-height: 250px;
+	overflow-y: scroll;
+  	overflow-x: hidden;
+	border: 1px solid #ededed;
+	visibility: visible;
+	word-wrap: break-word;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+li {
+	cursor: pointer;
+}
+

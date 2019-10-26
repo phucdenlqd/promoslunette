@@ -1,0 +1,77 @@
+function main(){
+	
+	/*etape1*/
+	
+	
+	$(".choix-e1").click(function(){
+		$(".tick-e1").hide();
+		$(".choix-e1").children("br").show();
+		$(this).children(".tick-e1").show();
+		$(this).children("br").hide();
+		$(".choix-e1").removeClass("choisi");
+		$(this).addClass("choisi");
+		var choix=$(this).attr("value");
+		var prix=$(this).attr("prix");
+		$(".info-type-de-verres").text(choix);
+		$(".prix-type-de-verres").text(prix+"€");
+	});
+
+	/*etape2*/
+	$(".choix-extra-e2").hide();
+	$(".choix-e2").click(function(){
+		$(".choix-extra-e2").hide();
+		$(".tick-e2").hide();
+		$(".choix-e2").children("br").show();
+		$(this).children(".tick-e2").show();
+		$(this).children("br").hide();
+		$(".choix-e2").removeClass("choisi");
+		$(this).addClass("choisi");
+	});
+	$("#choix3-e2").click(function(){
+		$(".choix-extra-e2").show();
+	})
+	$(".choix-extra").click(function(){
+		$(".choix-extra").removeClass("choisi");
+		$(this).addClass("choisi");
+	})
+	/*etape 3*/
+	
+	$(".choix-e3").click(function(){
+		$(".tick-e3").hide();
+		$(".choix-e3").children("br").show();
+		$(this).children(".tick-e3").show();
+		$(this).children("br").hide();
+		$(".choix-e3").removeClass("choisi");
+		$(this).addClass("choisi");
+	});
+
+		/*etape 4*/
+
+	
+	/*$(".choix-e4-input").click(function(){
+		$(".choix-e4-list").removeClass("VIP");
+		$(this).next().addClass("VIP");
+		$(".choix-e4-list").not(".VIP").hide();
+		$(".VIP").toggle();
+		
+	})	*/
+
+	$(".choix-e4-input").click(function(){
+		$(this).next().toggle();
+		$(".choix-e4-list").not($(this).next()).hide();
+	})
+
+	$("li").click(function(){
+		var value=$(this).attr("value"); 
+		$(this).closest(".choix-e4-list").prev().html(value+"<span style='float:right'>?</span>");
+		$(this).closest(".choix-e4-list").hide();
+	})
+
+
+
+	
+		
+	
+}
+$(document).ready(main);
+

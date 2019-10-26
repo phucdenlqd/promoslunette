@@ -1,0 +1,119 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- Pagination Buttons --- +/- Buttons and Input --- Pagination Buttons --------
+// width and height for input, buttons, line-height for label
+
+$input-label-button-size: 36px;
+
+// ------- BOX ELEMENTS ON SUB PAGES -------
+
+@mixin box-style {
+  background: $base-box-bg;
+  border: $main_border;
+  padding: 14px 18px 13px;
+  margin: 0 0 30px 0;
+  font: normal 13px/23px $font-custom;
+  @include border-radius($border-radius-base);
+}
+
+// ------- PopUp Elements(layered cart, newsletter, quick view ... ) -------
+
+@mixin popup-box-style {
+  background: $color-dark;
+  border: none;
+  @include border-radius($border-radius-base);
+  z-index: 99999;
+}
+
+@mixin popup-overlay-style {
+  background: rgba($dark-background, 0.2);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+@mixin popup-close-button {
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: $color-light;
+  z-index: 2;
+  text-align: center;
+  background: none;
+  @include border-radius(100%);
+  @include transition(all 0.3s ease-in-out);
+  
+  &:before {
+    content: "\f00d";
+    display: block;
+    font-family: $font-icon;
+    font-size: 16px;
+    line-height: 19px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform (translate(-50%, -50%));
+    @include transition(all 0.3s ease-in-out);
+  }
+  &:hover {
+    color: $primary-text-color;
+  }
+}
+
+// ------- PRODUCT ELEMENTS ------
+
+// ------- Product name -------
+
+$product-font: 700 14px/17px $font-custom2;
+$product-name-color: $color-dark;
+$product-name-hover-color: $color-primary;
+
+// ------- Product price -------
+
+$price-font: 400 30px/36px $font-family;
+$price-color: $color-primary;
+$product-price-color: $primary-text-color;
+$product-special-price-color: $dark-text-color;
+$product-old-price-color: $base-body-color;
+
+@mixin price-large {
+  font: $font-heading;
+  color: $price-color;
+  &.new-price {
+    color: $color-warning;
+  }
+}
+
+// ------- Image vars -------
+
+@mixin product-image {
+  display: block;
+  padding: 0;
+  position: relative;
+  background: $light-background;
+}
+
+@mixin products-block-image {
+  display: block;
+  padding: 0;
+  background: $light-background;
+}
+
+@mixin post-category-image {
+  @include product-image;
+  float: left;
+  margin: 0 20px 10px 0;
+}
+
+@mixin post-image {
+  display: block;
+  margin-bottom: 30px;
+}
