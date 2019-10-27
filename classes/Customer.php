@@ -195,7 +195,7 @@ class CustomerCore extends ObjectModel
             'date_upd' =>                    array('type' => self::TYPE_DATE, 'validate' => 'isDate', 'copy_post' => false),
             'date_last_payment' =>           array('type' => self::TYPE_DATE, 'copy_post' => false),
             'number_payment_day' =>            array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'copy_post' => false),
-
+            'assurancefile' => array('type' => self::TYPE_STRING),
         ),
     );
 

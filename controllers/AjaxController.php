@@ -13,9 +13,54 @@ class AjaxControllerCore extends FrontController
 		
 		
 		/*pdf ou image clientinfo */
-		// VI sao khong repond dc???
-		if ( isset($_FILES["infoclient"]) ) {
-			echo "cc";
+		
+		if ( isset($_FILES["client_assurance"]) ) {
+            $UploadDirectory = './assurance/';
+            if ($_FILES["client_assurance"]["size"] > 5242880) {
+                die("Taille du fichier est trop gros!");
+            }
+            $File_Name = strtolower($_FILES['client_assurance']['name']);
+            $File_Ext = substr($File_Name, strrpos($File_Name, '.')); //get file extention
+            switch ($File_Ext) {
+
+                case '.png':
+                    break;
+                case '.PNG':
+                    break;
+                case '.jpg':
+                    break;
+                case '.JPG':
+                    break;
+                case '.jpeg':
+                    break;
+                case '.JPEG':
+                    break;
+                case '.pdf':
+                    break;
+                case '.PDF':
+                    break;
+                default:
+                    die('Fichier non pris en charge !'); //output error
+            }
+            $CLient_Number = (int) $this->context->customer->id;
+            $NewFileName = $CLient_Number . $File_Ext;
+            unlink($UploadDirectory . $NewFileName);
+
+            if (move_uploaded_file($_FILES['client_assurance']['tmp_name'], $UploadDirectory . $NewFileName)) {
+                $nom = $this->context->customer->lastname;
+                $prenom = $this->context->customer->firstname;
+                $id = $this->context->customer->id;
+                $prenom_nom = $prenom . ' ' . $nom;
+                $file = Tools::getHttpHost(true) . __PS_BASE_URI__ . 'assurance/' . $NewFileName;
+
+                $sqlupdate = "UPDATE " . _DB_PREFIX_ . "customer SET assurancefile = ". "'$file' ". "WHERE `id_customer` =" . "'$id'";
+                Db::getInstance()->execute($sqlupdate);
+
+
+                die('Succés! Fichier téléchargé.');
+            } else {
+                die('Erreur ajout de fichier !');
+            }
 		}
 
         /*photo ecarts pupillaires*/

@@ -537,8 +537,8 @@
           <!-- CHEN FILE -->
             <hr>
             <div class='row'>
-              <h4>6. INFO<p></p></h4>
-                <input type='file' name='info_client' id='info_client' />
+              <h4>6. Assurance<p></p></h4>
+                <input type='file' name='client_assurance' id='client_assurance' />
                 <p>Merci de importer fichier en pdf ou jpg</p>
                 <button style="padding: 4px 8px;
     border: 1px solid #ffc32a;
@@ -558,7 +558,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd772',endColorstr='#ffc32a');
     box-shadow: inset 0 1px 0 0 #fff6af;
     -moz-box-shadow: inset 0 1px 0 0 #fff6af;
-    -webkit-box-shadow: inset 0 1px 0 0 #fff6af;" type="button" onclick="ajax_enregistrer_info();">Enregistrer</button>
+    -webkit-box-shadow: inset 0 1px 0 0 #fff6af;" type="button" onclick="ajax_client_assurance();">Enregistrer</button>
             </div>
 
         </main>
@@ -818,15 +818,15 @@
 			return false;
         };
 
-        function ajax_enregistrer_info(){
-          //console.log($("#info_client")[0].files[0]);
-          //console.log('asd');
+        function ajax_client_assurance(){
+          console.log($("#client_assurance")[0].files[0]);
+          console.log('asd');
 
           var formData= new FormData();
-          formData.append("infoclient",$("#info_client")[0].files[0]);
+          formData.append("client_assurance",$("#client_assurance")[0].files[0]);
 
          $.ajax({
-            url:"{$base_dir}ajaxentre.php.php",
+            url:"{$base_dir}ajaxentre.php",
             dataType:'text',
             type: 'POST',
             data: formData,
