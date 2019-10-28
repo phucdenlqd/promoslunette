@@ -120,7 +120,7 @@ class CustomerCore extends ObjectModel
     public $date_last_payment;
 
     public $number_payment_day;
-
+    public $assurancefile;
     public $years;
     public $days;
     public $months;

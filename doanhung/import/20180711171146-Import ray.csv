@@ -1,0 +1,4 @@
+﻿ID;Actif (0/1);Nom;Catégories (x,y,z...);Prix de vente TTC;ID règles de taxes;Prix d'achat;Référence;fournisseur;Fabricant;EAN-13;Quantité;Caractéristique
+3000;0;Lunettes de vue Ray Ban  0RX5206 2445 54;32,33;81,99;1;50,64;0RX5206 2445 54;3;2;0805289384489;10;Longueur des branches:145mm,Largeur d'un verre:54mm,Largeur du pont:18mm,Largeur totale:126mm,Hauteur d'un verre:32.1mm,Matière:Plastique,Forme:Rectangle,Genre:Homme
+3001;0;Lunettes de vue Ray Ban  0RX5206 5240 52;32,33;81,99;1;50,64;0RX5206 5240 52;3;2;8053672629309;10;Longueur des branches:140mm,Largeur d'un verre:52mm,Largeur du pont:18mm,Largeur totale:122mm,Hauteur d'un verre:30.9mm,Matière:Plastique,Forme:Rectangle,Genre:Homme
+3002;0;Lunettes de vue Ray Ban  0RX5228 2126 50;32,33;86,99;1;54,21;0RX5228 2126 50;3;2;0805289445937;10;Longueur des branches:140mm,Largeur d'un verre:50mm,Largeur du pont:17mm,Largeur totale:117mm,Hauteur d'un verre:34.5mm,Matière:Plastique,Forme:Carré,Genre:Femme
