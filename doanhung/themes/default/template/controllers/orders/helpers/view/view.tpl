@@ -600,6 +600,8 @@
 								{/if}
 							{else}
 								<dl class="well list-detail">
+									<dt>{l s='Assurance'}</dt>
+										<dd><a href="{$customer->assurancefile}" target="_blank"><i class="icon-envelope-o"></i> {$customer->assurancefile}</a></dd>
 									<dt>{l s='Email'}</dt>
 										<dd><a href="mailto:{$customer->email}"><i class="icon-envelope-o"></i> {$customer->email}</a></dd>
 									<dt>{l s='Account registered'}</dt>
