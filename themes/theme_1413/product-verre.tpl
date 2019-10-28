@@ -537,7 +537,7 @@
           <!-- CHEN FILE -->
             <hr>
             <div class='row'>
-              <h4>6. Assurance<p></p></h4>
+              <h4>6. Assurance (Optionnel)<p></p></h4>
                 <input type='file' name='client_assurance' id='client_assurance' />
                 <p>Merci de importer fichier en pdf ou jpg</p>
                 <button style="padding: 4px 8px;
